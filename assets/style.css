@@ -1,0 +1,99 @@
+/* Apply CSS reset to remove default padding and margin on all elements */
+/* Also adds a dark blue bg color with text color being white */ 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #003f58;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+/* CENTERS EVERYTHING IN GAME */
+.game {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TITLE OF GAME */
+.title {
+    position: absolute;
+    top: 0;
+    font-size: 4rem;
+    z-index: 2;
+}
+
+/* SCORE BOARD */
+.score {
+    display: flex;
+    width: 30vw;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 70px;
+    z-index: 1;
+}
+
+/* SCORE */
+.p-count, .c-count {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* DISPLAYS 3 BUTTONS IN 1 LINE */
+.options {
+    display: flex;
+    width: 50vw;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+/* STYLING ON ALL 3 BUTTONS */
+.rock, .paper, .scissors {
+    padding: 0.8rem;
+    width: 100px;
+    border-radius: 10px;
+    background: green;
+    outline: none;
+    border-color: green;
+    border: none;
+    cursor: pointer;
+}
+
+/* STYLING ON RELOAD BUTTON */
+.restart {
+    display: none;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: green;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 612px) {
+    .title {
+        text-align: center;
+    }
+
+    .score {
+        position: absolute;
+        top: 200px;
+        width: 100vw;
+    }
+
+    .options {
+        width: 100vw;
+    }
+}
